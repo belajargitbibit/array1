@@ -1,7 +1,5 @@
 <?php
-// perulangan pada array
-// for atau foreach
-$angka = [1, 3, 5, 7, 9, 11, 13, 15];
+$mahasiswa = ["Bibit Kukuh Wicaksono", "22520013", "TI-B", "bibitkukuh00@gmail.com"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,33 +7,17 @@ $angka = [1, 3, 5, 7, 9, 11, 13, 15];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Array</title>
-    <style> 
-        .kotak{
-            width: 50px;
-            height: 50px;
-            background-color: salmon;
-            text-align: center;
-            line-height: 50px;
-            margin: 30px;
-            float: left;
-        }
-        .clear{
-            clear: both
-        }
-    </style>
+    <title>Daftar Mahasiswa</title>
 </head>
 <body>
-    <?php for ($i = 0 ; $i < 8; $i++) {?>
-        <div class="kotak">
-            <?php echo $angka[$i]; ?>
-        </div>
-        <?php } ?>
-        <div class="clear"></div>
-        <?php foreach($angka as $a) : ?>
-            <div class="kotak">
-                <?php echo $a; ?>
-        </div>
-            <?php endforeach?>
+    <h1> Daftar Mahasiswa</h1>
+    <ul>
+        <?php foreach($mahasiswa as $mhs): ?>
+            <li>
+                <?php echo $mhs;
+                ?>
+            </li>
+            <?php endforeach ?>
+    </ul>
 </body>
 </html>
